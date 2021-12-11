@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <title> Oblicz swoje BMI! </title>
+</head>
+<body>
+<h1>Zapisz swoje bmi</h1>
+<form method="post">
+        Wzrost (w cm) <input name="wzrost" type="number"><br>
+        Waga (w kg) <input name="waga" type="number" step="any"><br>
+        <input type="submit">
+    </form>
+    <p id="result" th:if="${resultid ne null}">
+        Twoje informacje zostały zapisane na ID:<span th:text="${resultid}"></span>.
+    </p>
+<p th:if="${problem ne null}">Nie udało się zapisać wartości<br> <i th:text="${problem}"></i></p>
+<a href="main">Powrót na stronę główną</a>
+</body>
+</html>
+
+
