@@ -1,6 +1,12 @@
 package pl.edu.zse.bmiCalc.model;
 
+import javax.persistence.*;
+
+
+@Entity(name = "tbmi")
 public class Bmi {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int wzrost;
     private float waga;
